@@ -12,13 +12,13 @@
 
 ### 환경에 맞게 다음 변수 설정
 
-//slack webhook url
-SLACK_WEBHOOK_URL=""
-//멜론 티켓 상품 아이디 
-PROD_ID = ""
-POC_CODE = ""
-//slack 채널
-SLACK_CHANNEL_NAME = ""
-SELL_TYPE = ""
-//공연 날짜
-PERF_DAY = ""
+> slack webhook url
+- SLACK_WEBHOOK_URL=""
+> 멜론 티켓 상품 아이디 
+- PROD_ID = ""
+- POC_CODE = ""
+> slack 채널
+- SLACK_CHANNEL_NAME = ""
+- SELL_TYPE = ""
+> 공연 날짜
+- PERF_DAY = ""
