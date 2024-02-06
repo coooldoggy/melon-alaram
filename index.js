@@ -10,6 +10,7 @@ const performanceDay = process.env.PERF_DAY;
 const channelName = process.env.SLACK_CHANNEL_NAME;
 const slack = new Slack();
 slack.setWebhook(webhookUrl);
+const baseUrl = 'https://tktapi.melon.com/api/product/schedule/list.json';
 
 const send = async (message) => {
     slack.webhook({
@@ -33,7 +34,8 @@ function getFormattedTime() {
 }
 
 
-var requestUrl = `https://tktapi.melon.com/api/product/schedule/list.json?prodId=${prodId}&pocCode=${pocCode}&perfTypeCode=GN0001&sellTypeCode=${sellType}&corpCodeNo=&timestamp=${getFormattedTime()}&v=1`
+var requestUrl = `${baseUrl}?prodId=${prodId}&pocCode=${pocCode}&perfTypeCode=GN0001&sellTypeCode=${sellType}&corpCodeNo=&timestamp=${getFormattedTime()}&v=1`;
+
 
 console.log(requestUrl);
 
