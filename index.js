@@ -22,15 +22,26 @@ const send = async (message) => {
     });
 }
 
+// function getFormattedTime() {
+//     const now = new Date();
+//     const year = now.getFullYear();
+//     const month = String(now.getMonth() + 1).padStart(2, '0'); 
+//     const day = String(now.getDate()).padStart(2, '0');
+//     const hour = String(now.getHours()).padStart(2, '0');
+//     const minute = String(now.getMinutes()).padStart(2, '0');
+//     const second = String(now.getSeconds()).padStart(2, '0');
+//     return `${year}${month}${day}${hour}${minute}${second}`;
+// }
+
 function getFormattedTime() {
     const now = new Date();
-    const year = now.getFullYear();
-    const month = String(now.getMonth() + 1).padStart(2, '0'); 
-    const day = String(now.getDate()).padStart(2, '0');
-    const hour = String(now.getHours()).padStart(2, '0');
-    const minute = String(now.getMinutes()).padStart(2, '0');
-    const second = String(now.getSeconds()).padStart(2, '0');
-    return `${year}${month}${day}${hour}${minute}${second}`;
+    // Set the timezone to Seoul (Korea Standard Time, KST)
+    const options = { timeZone: 'Asia/Seoul' };
+    // Use toLocaleString() to format the date and time in Seoul's timezone
+    const formattedTime = now.toLocaleString('en-US', options);
+    // Remove any non-numeric characters to get a clean timestamp
+    const cleanTimestamp = formattedTime.replace(/\D/g, '');
+    return cleanTimestamp;
 }
 
 
