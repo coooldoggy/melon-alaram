@@ -57,7 +57,7 @@ const headers = {
     'Accept-Encoding': 'gzip, deflate, br',
     'Accept-Language': 'ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7',
     'Connection': 'keep-alive',
-    // 'Cookie': 'PCID=16602144656613347386364; PC_PCID=16602144656613347386364; search.perf=209371; ARY_CM=; TKT_POC_ID=AX25; NetFunnel_ID=WP15',
+    'Cookie': 'PCID=16602144656613347386364; PC_PCID=16602144656613347386364; search.perf=209371; ARY_CM=; TKT_POC_ID=AX25; NetFunnel_ID=WP15',
     'Host': 'tktapi.melon.com',
     'Origin': 'https://m.ticket.melon.com',
     'Referer': 'https://m.ticket.melon.com/',
